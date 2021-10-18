@@ -8,15 +8,15 @@ export interface Menu {
 }
 
 const MENUITEMS = [
-  { state: 'dashboard', name: 'Datos Generales', type: 'link', icon: 'av_timer' },
-  { state: 'button', type: 'link', name: 'Academico y Laboral', icon: 'crop_7_5' },
-  { state: 'grid', type: 'link', name: 'Especialidad', icon: 'view_comfy' },
-  { state: 'lists', type: 'link', name: 'Informacion Personal', icon: 'view_list' },
-  { state: 'menu', type: 'link', name: 'Datos Fiscales', icon: 'view_headline' },
-  { state: 'tabs', type: 'link', name: 'Documentos', icon: 'tab' },
-  { state: 'stepper', type: 'link', name: 'Tarifa por Turno', icon: 'web' },
-  { state: 'expansion', type: 'link', name: 'Datos Bancarios', icon: 'vertical_align_center'},
-  { state: 'chips', type: 'link', name: 'Horarios de Atencion', icon: 'vignette' }
+  { state: 'dashboard', name: 'Datos Generales', type: 'link', icon: 'tab' },
+  { state: 'button', type: 'link', name: 'Academico y Laboral', icon: 'folder_shared' },
+  { state: 'grid', type: 'link', name: 'Especialidad', icon: 'auto_graph' },
+  { state: 'lists', type: 'link', name: 'Informacion Personal', icon: 'person' },
+  { state: 'menu', type: 'link', name: 'Datos Fiscales', icon: 'account_balance' },
+  { state: 'tabs', type: 'link', name: 'Documentos', icon: 'content_copy' },
+  { state: 'stepper', type: 'link', name: 'Tarifa por Turno', icon: 'attach_money' },
+  { state: 'expansion', type: 'link', name: 'Datos Bancarios', icon: 'credit_card'},
+  { state: 'chips', type: 'link', name: 'Horarios de Atencion', icon: 'av_timer' }
 ];
 
 @Injectable()
