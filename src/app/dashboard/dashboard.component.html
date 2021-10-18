@@ -1,14 +1,82 @@
-<p>Formulario de datos generales</p>
+<mat-card>
+	<mat-card-content>
+	<mat-card-title>Datos Generales</mat-card-title>
 
 
-<section>
-  <div class="example-label">Basic</div>
-  <div class="example-button-row">
-    <button mat-button>Basic</button>
-    <button mat-button color="primary">Primary</button>
-    <button mat-button color="accent">Accent</button>
-    <button mat-button color="warn">Warn</button>
-    <button mat-button disabled>Disabled</button>
-    <a mat-button href="https://www.google.com/" target="_blank">Link</a>
-  </div>
-</section>
+      <mat-form-field class="full-width-field" appearance="fill">
+        <mat-label>Nombre(s)</mat-label>
+        <input matInput placeholder="Ex. Juan" value="">
+      </mat-form-field>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Apellido Paterno</mat-label>
+        <input matInput placeholder="Ex. Perez" value="">
+      </mat-form-field>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Apellido Materno</mat-label>
+        <input matInput placeholder="Ex. Lopez" value="">
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Fecha de Nacimiento</mat-label>
+        <input matInput [matDatepicker]="picker">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Genero</mat-label>
+        <mat-select>
+          <mat-option value="option1">Femenino</mat-option>
+          <mat-option value="option2">Masculino</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Correo Electrónico</mat-label>
+        <input matInput placeholder="Ex. algo@algo.com" value="">
+      </mat-form-field>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Telefono Fijo</mat-label>
+        <input matInput placeholder="Ex. 7776665544" value="">
+      </mat-form-field>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Telefono celular</mat-label>
+        <input matInput placeholder="Ex. 5554443322" value="">
+      </mat-form-field>
+      <h4>Dirección</h4>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Calle</mat-label>
+        <input matInput placeholder="Ex. Av. Juarez" value="">
+      </mat-form-field>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Número Exterior</mat-label>
+        <input matInput placeholder="Ex. 0" value="">
+      </mat-form-field>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Número Interior</mat-label>
+        <input matInput placeholder="Ex. b" value="">
+      </mat-form-field>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Colonia</mat-label>
+        <input matInput placeholder="Ex. San Nicolas" value="">
+      </mat-form-field>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Codigo Postal</mat-label>
+        <input matInput placeholder="Ex. 111111" value="">
+      </mat-form-field>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Delegación o Municipio</mat-label>
+        <input matInput placeholder="Ex. San Nicolas" value="">
+      </mat-form-field>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Ciudad</mat-label>
+        <input matInput placeholder="Ex. San Nicolas" value="">
+      </mat-form-field>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Estado</mat-label>
+        <input matInput placeholder="Ex. Puebla" value="">
+      </mat-form-field>
+      <h4>Cobertura</h4>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>¿En qué zonas quieres trabajar?</mat-label>
+        <input matInput placeholder="Ex. " value="">
+      </mat-form-field>
+	</mat-card-content>
+</mat-card>
