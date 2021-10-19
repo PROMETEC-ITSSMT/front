@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
 
 import { AcademictsComponent} from './academics/academics.component'
-import { GridComponent } from './grid/grid.component';
+import { GridComponent } from './speciality/speciality.component';
 import { ListsComponent } from './lists/lists.component';
 import { MenuComponent } from './menu/menu.component';
 import { TabsComponent } from './tabs/tabs.component';
@@ -23,7 +23,7 @@ export const MaterialRoutes: Routes = [
     component: AcademictsComponent
   },
   {
-    path: 'grid',
+    path: 'specs',
     component: GridComponent
   },
   {

@@ -13,7 +13,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MaterialRoutes } from './material.routing';
 import { AcademictsComponent } from './academics/academics.component';
 
-import { GridComponent } from './grid/grid.component';
+import { GridComponent } from './speciality/speciality.component';
 import { ListsComponent } from './lists/lists.component';
 import { MenuComponent } from './menu/menu.component';
 import { TabsComponent } from './tabs/tabs.component';

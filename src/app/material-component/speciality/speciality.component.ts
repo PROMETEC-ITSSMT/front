@@ -3,8 +3,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
 
 @Component({
   selector: 'app-grid',
-  templateUrl: './grid.component.html',
-  styleUrls: ['./grid.component.scss']
+  templateUrl: './speciality.component.html',
+  styleUrls: ['./speciality.component.scss']
 })
 export class GridComponent {
   cards = [
@@ -14,7 +14,7 @@ export class GridComponent {
     {title: 'Title 4', content: 'Content 4'}
   ];
   typesOfShoes = [
-    'Administracion de medicamentos via oral.',
+    'Administración de medicamentos via oral.',
     'Toma de signos vitales y vigilancia de los mismos',
     'Procedimientos médicos básicos (inyecciones, suero, etc)',
     'Ayuda en higiene personal (baño de esponja, tina, etc)',

@@ -10,7 +10,7 @@ export interface Menu {
 const MENUITEMS = [
   { state: 'dashboard', name: 'Datos Generales', type: 'link', icon: 'tab' },
   { state: 'academics', type: 'link', name: 'Academico y Laboral', icon: 'folder_shared' },
-  { state: 'grid', type: 'link', name: 'Especialidad', icon: 'auto_graph' },
+  { state: 'specs', type: 'link', name: 'Especialidad', icon: 'auto_graph' },
   { state: 'lists', type: 'link', name: 'Informacion Personal', icon: 'person' },
   { state: 'menu', type: 'link', name: 'Datos Fiscales', icon: 'account_balance' },
   { state: 'tabs', type: 'link', name: 'Documentos', icon: 'content_copy' },
