@@ -54,15 +54,10 @@ export class DashboardComponent implements OnInit {
     const input = event.input;
     const value = event.value;
 
-
-
-
-    // Add our fruit
     if ((value || '').trim() && this.allFruits.indexOf(value) > -1) {
       this.fruits.push(value.trim());
     }
 
-    // Reset the input value
     if (input) {
       input.value = '';
     }
