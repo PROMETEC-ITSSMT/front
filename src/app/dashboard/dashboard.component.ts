@@ -26,9 +26,7 @@ export class DashboardComponent implements OnInit {
   prevStep() {
     this.step--;
   }
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
+
 	firstFormGroup: FormGroup=Object.create(null);
   toppings = new FormControl();
   visible = true;
@@ -48,6 +46,8 @@ export class DashboardComponent implements OnInit {
     this.filteredFruits = this.fruitCtrl.valueChanges.pipe(
       startWith(null),
       map((fruit: string | null) => fruit ? this._filter(fruit) : this.allFruits.slice()));
+  }
+  ngOnInit(): void {
   }
 
   add(event: MatChipInputEvent): void {
