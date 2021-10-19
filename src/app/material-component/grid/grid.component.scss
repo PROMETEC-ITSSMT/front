@@ -1,3 +1,13 @@
 mat-grid-tile {
   background: lightblue;
 }
+
+.example-full-width {
+  width: 50%;
+}
+
+.text-inside-grid {
+  position: absolute;
+  justify-content: flex-start !important;
+  left: 25px;
+}

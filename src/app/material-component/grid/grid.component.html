@@ -1,37 +1,115 @@
-<!-- ============================================================== -->
-<!-- Fixed height Card Grid-->
-<!-- ============================================================== -->
 <div fxLayout="row">
-    <div fxFlex.gt-sm="100%" >
-        <mat-card>
-            <mat-card-content>
-              <mat-card-title>Fixed height grid-list</mat-card-title>
-                <mat-card-subtitle><code>&lt;mat-grid-list&gt;</code> is a two-dimensional list view that arranges cells into grid-based layout. See Material Design spec. <code><a href="https://material.io/guidelines/components/grid-lists.html">Official Doc here</a></code></mat-card-subtitle>
-              <mat-grid-list cols="4" rowHeight="100px">
-                  <mat-grid-tile
-                      *ngFor="let tile of tiles"
-                      [colspan]="tile.cols"
-                      [rowspan]="tile.rows"
-                      [style.background]="tile.color">
-                    {{tile.text}}
-                  </mat-grid-tile>
-                </mat-grid-list>  
-            </mat-card-content>        
-        </mat-card>
-    </div>
-</div>    
-<!-- ============================================================== -->
-<!-- Basic Card Grid-->
-<!-- ============================================================== -->
-<mat-card>
-    <mat-card-content>
-      <mat-card-title>Basic grid-list</mat-card-title>
-      <mat-card-subtitle><code>&lt;mat-grid-list&gt;</code> is a two-dimensional list view that arranges cells into grid-based layout. See Material Design spec. <a href="https://material.io/guidelines/components/grid-lists.html">here</a></mat-card-subtitle>
-      <mat-grid-list cols="2" rowHeight="2:1">
-        <mat-grid-tile>1</mat-grid-tile>
-        <mat-grid-tile>2</mat-grid-tile>
-        <mat-grid-tile>3</mat-grid-tile>
-        <mat-grid-tile>4</mat-grid-tile>
-      </mat-grid-list>  
-    </mat-card-content>        
-</mat-card>
+  <div fxFlex.gt-sm="100%" >
+      <mat-card>
+          <mat-card-content>
+            <mat-card-title><h2>Especialidad</h2></mat-card-title>
+            <mat-card-subtitle>Seleccione la configuracion de acuerdo a su especialidad.</mat-card-subtitle>
+            <mat-grid-list cols="2" rowHeight="450px">
+              <mat-grid-tile>
+                <form style="text-align: center;">
+                  <img src="../../../assets/images/01bebes.png" alt="" style="width: 40%; height: 40%; text-align: center;">
+                  <table class="example-full-width" cellspacing="30">
+                    <tr>
+                      <td>
+                        <mat-slide-toggle class="example-margin">Bebés/Niños</mat-slide-toggle>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <mat-slide-toggle class="example-margin">Cuidador@</mat-slide-toggle>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <mat-slide-toggle class="example-margin">Enfermer@</mat-slide-toggle>
+                      </td>
+                    </tr>
+                  </table>
+                </form>
+              </mat-grid-tile>
+              <mat-grid-tile>
+                <form style="text-align: center;">
+                  <img src="../../../assets/images/01bebes.png" alt="" style="width: 40%; height: 40%; text-align: center;">
+                  <table class="example-full-width" cellspacing="30">
+                    <tr>
+                      <td>
+                        <mat-slide-toggle class="example-margin">Bebés/Niños</mat-slide-toggle>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <mat-slide-toggle class="example-margin">Cuidador@</mat-slide-toggle>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <mat-slide-toggle class="example-margin">Enfermer@</mat-slide-toggle>
+                      </td>
+                    </tr>
+                  </table>
+                </form>
+              </mat-grid-tile>
+            </mat-grid-list>
+          </mat-card-content>
+      </mat-card>
+  </div>
+</div>
+<div fxLayout="row">
+  <div fxFlex.gt-sm="50%" >
+      <mat-card>
+          <mat-card-content>
+            <mat-card-title>Básico</mat-card-title>
+            <mat-card-subtitle>Seleccione las actividades que desempeña con gran eficiencia.</mat-card-subtitle>
+            <mat-selection-list #shoes>
+               <mat-list-option *ngFor="let shoe of typesOfShoes">
+                  {{shoe}}
+               </mat-list-option>
+            </mat-selection-list>
+            <p>
+                Habilidades seleccionadas: {{shoes.selectedOptions.selected.length}}
+            </p>
+          </mat-card-content>
+          <mat-card-content>
+            <mat-card-title>Específico</mat-card-title>
+            <mat-card-subtitle>Seleccione las actividades especificas que desempeña con gran eficiencia.</mat-card-subtitle>
+            <mat-selection-list #shoes>
+               <mat-list-option *ngFor="let shoe of typesOfShoes">
+                  {{shoe}}
+               </mat-list-option>
+            </mat-selection-list>
+            <p>
+                Habilidades seleccionadas: {{shoes.selectedOptions.selected.length}}
+            </p>
+          </mat-card-content>
+      </mat-card>
+  </div>
+  <div fxFlex.gt-sm="50%" >
+    <mat-card>
+      <mat-card-content>
+        <mat-card-title>Básico</mat-card-title>
+        <mat-card-subtitle>Seleccione las actividades que desempeña con gran eficiencia..</mat-card-subtitle>
+        <mat-selection-list #shoess>
+           <mat-list-option *ngFor="let shoe of typesOfShoes2">
+              {{shoe}}
+           </mat-list-option>
+        </mat-selection-list>
+        <p>
+            Habilidades seleccionadas: {{shoess.selectedOptions.selected.length}}
+        </p>
+      </mat-card-content>
+      <mat-card-content>
+        <mat-card-title>Específico</mat-card-title>
+        <mat-card-subtitle>Seleccione las actividades especificas que desempeña con gran eficiencia.</mat-card-subtitle>
+        <mat-selection-list #shoes>
+           <mat-list-option *ngFor="let shoe of typesOfShoes">
+              {{shoe}}
+           </mat-list-option>
+        </mat-selection-list>
+        <p>
+            Habilidades seleccionadas: {{shoes.selectedOptions.selected.length}}
+        </p>
+      </mat-card-content>
+  </mat-card>
+  </div>
+</div>
+

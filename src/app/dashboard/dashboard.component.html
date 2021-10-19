@@ -1,82 +1,108 @@
 <mat-card>
-	<mat-card-content>
-	<mat-card-title>Datos Generales</mat-card-title>
+  <mat-card-content>
+    <mat-card-title>Datos Generales</mat-card-title>
+    <mat-card-subtitle></mat-card-subtitle>
+    <mat-accordion>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title> Personal personales </mat-panel-title>
+          <mat-panel-description> Verifique sus datos personales. </mat-panel-description>
+        </mat-expansion-panel-header>
+        <mat-form-field>
+          <input matInput placeholder="Nombre(s)">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Apellido Paterno">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Apellido Materno">
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Fecha de Nacimiento</mat-label>
+          <input matInput [matDatepicker]="picker">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field>
 
+          <mat-label>Genero</mat-label>
+          <mat-select>
+            <mat-option value="option1">Femenino</mat-option>
+            <mat-option value="option2">Masculino</mat-option>
+          </mat-select>
 
-      <mat-form-field class="full-width-field" appearance="fill">
-        <mat-label>Nombre(s)</mat-label>
-        <input matInput placeholder="Ex. Juan" value="">
-      </mat-form-field>
-      <mat-form-field class="example-full-width" appearance="fill">
-        <mat-label>Apellido Paterno</mat-label>
-        <input matInput placeholder="Ex. Perez" value="">
-      </mat-form-field>
-      <mat-form-field class="example-full-width" appearance="fill">
-        <mat-label>Apellido Materno</mat-label>
-        <input matInput placeholder="Ex. Lopez" value="">
-      </mat-form-field>
-      <mat-form-field appearance="fill">
-        <mat-label>Fecha de Nacimiento</mat-label>
-        <input matInput [matDatepicker]="picker">
-        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-        <mat-datepicker #picker></mat-datepicker>
-      </mat-form-field>
-      <mat-form-field appearance="fill">
-        <mat-label>Genero</mat-label>
-        <mat-select>
-          <mat-option value="option1">Femenino</mat-option>
-          <mat-option value="option2">Masculino</mat-option>
-        </mat-select>
-      </mat-form-field>
-      <mat-form-field class="example-full-width" appearance="fill">
-        <mat-label>Correo Electrónico</mat-label>
-        <input matInput placeholder="Ex. algo@algo.com" value="">
-      </mat-form-field>
-      <mat-form-field class="example-full-width" appearance="fill">
-        <mat-label>Telefono Fijo</mat-label>
-        <input matInput placeholder="Ex. 7776665544" value="">
-      </mat-form-field>
-      <mat-form-field class="example-full-width" appearance="fill">
-        <mat-label>Telefono celular</mat-label>
-        <input matInput placeholder="Ex. 5554443322" value="">
-      </mat-form-field>
-      <h4>Dirección</h4>
-      <mat-form-field class="example-full-width" appearance="fill">
-        <mat-label>Calle</mat-label>
-        <input matInput placeholder="Ex. Av. Juarez" value="">
-      </mat-form-field>
-      <mat-form-field class="example-full-width" appearance="fill">
-        <mat-label>Número Exterior</mat-label>
-        <input matInput placeholder="Ex. 0" value="">
-      </mat-form-field>
-      <mat-form-field class="example-full-width" appearance="fill">
-        <mat-label>Número Interior</mat-label>
-        <input matInput placeholder="Ex. b" value="">
-      </mat-form-field>
-      <mat-form-field class="example-full-width" appearance="fill">
-        <mat-label>Colonia</mat-label>
-        <input matInput placeholder="Ex. San Nicolas" value="">
-      </mat-form-field>
-      <mat-form-field class="example-full-width" appearance="fill">
-        <mat-label>Codigo Postal</mat-label>
-        <input matInput placeholder="Ex. 111111" value="">
-      </mat-form-field>
-      <mat-form-field class="example-full-width" appearance="fill">
-        <mat-label>Delegación o Municipio</mat-label>
-        <input matInput placeholder="Ex. San Nicolas" value="">
-      </mat-form-field>
-      <mat-form-field class="example-full-width" appearance="fill">
-        <mat-label>Ciudad</mat-label>
-        <input matInput placeholder="Ex. San Nicolas" value="">
-      </mat-form-field>
-      <mat-form-field class="example-full-width" appearance="fill">
-        <mat-label>Estado</mat-label>
-        <input matInput placeholder="Ex. Puebla" value="">
-      </mat-form-field>
-      <h4>Cobertura</h4>
-      <mat-form-field class="example-full-width" appearance="fill">
-        <mat-label>¿En qué zonas quieres trabajar?</mat-label>
-        <input matInput placeholder="Ex. " value="">
-      </mat-form-field>
-	</mat-card-content>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Correo Electrónico">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Telefono Fijo">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Telefono Celular">
+        </mat-form-field>
+      </mat-expansion-panel>
+      <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+          <mat-panel-title> Dirección </mat-panel-title>
+          <mat-panel-description>    Ingrese los datos de su direccion personal </mat-panel-description>
+        </mat-expansion-panel-header>
+        <mat-form-field>
+          <input matInput placeholder="Calle">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Numero Exterior">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Numero Interior">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Colonia">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Codigo Postal">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Delegacion o Municipio">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Ciudad">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Estado">
+        </mat-form-field>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </mat-card-content>
 </mat-card>
+
+<mat-card>
+  <mat-card-content>
+    <mat-card>
+      <mat-card-content>
+      <mat-card-title>Cobertura</mat-card-title>
+      <mat-card-subtitle>¿En que zona quieres trabajar? </mat-card-subtitle>
+
+        <mat-form-field class="demo-chip-list">
+            <mat-chip-list #chipList>
+              <mat-chip *ngFor="let fruit of fruits" [selectable]="selectable"
+                       [removable]="removable" (removed)="remove(fruit)">
+                {{fruit.name}}
+                <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+              </mat-chip>
+              <input placeholder="Zonas:"
+                     [matChipInputFor]="chipList"
+                     [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                     [matChipInputAddOnBlur]="addOnBlur"
+                     (matChipInputTokenEnd)="add($event)" />
+            </mat-chip-list>
+          </mat-form-field>
+      </mat-card-content>
+    </mat-card>
+    <div class="example-button-row">
+      <button mat-raised-button color="primary" style="margin-right: 20px;">Guardar</button>
+      <button mat-raised-button color="warn">Cancelar</button>
+    </div>
+  </mat-card-content>
+</mat-card>
+
