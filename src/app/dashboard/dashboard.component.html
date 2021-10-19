@@ -1,11 +1,14 @@
 <mat-card>
   <mat-card-content>
+
     <mat-card-title>Datos Generales</mat-card-title>
     <mat-card-subtitle></mat-card-subtitle>
+
+
     <mat-accordion>
       <mat-expansion-panel>
         <mat-expansion-panel-header>
-          <mat-panel-title> Personal personales </mat-panel-title>
+          <mat-panel-title> <b> Datos personales </b></mat-panel-title>
           <mat-panel-description> Verifique sus datos personales. </mat-panel-description>
         </mat-expansion-panel-header>
         <mat-form-field>
@@ -44,8 +47,8 @@
       </mat-expansion-panel>
       <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
         <mat-expansion-panel-header>
-          <mat-panel-title> Dirección </mat-panel-title>
-          <mat-panel-description>    Ingrese los datos de su direccion personal </mat-panel-description>
+          <mat-panel-title><b>Dirección </b> </mat-panel-title>
+          <mat-panel-description> Verifique los datos de su direccion personal </mat-panel-description>
         </mat-expansion-panel-header>
         <mat-form-field>
           <input matInput placeholder="Calle">
@@ -71,75 +74,83 @@
         <mat-form-field>
           <input matInput placeholder="Estado">
         </mat-form-field>
+        
       </mat-expansion-panel>
     </mat-accordion>
-  </mat-card-content>
-</mat-card>
 
-<mat-card-content>
-  <mat-card-content>
-    <mat-card>
-      <mat-form-field class="example-chip-list">
-        <mat-chip-list #chipList required>
-          <input
-            placeholder="Cutomer name"
-            #fruitInput
-            [matAutocomplete]="auto"
-            [matChipInputFor]="chipList"
-            [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
-            [matChipInputAddOnBlur]="addOnBlur"
-            (matChipInputTokenEnd)="add($event)" >
-        </mat-chip-list>
-        <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
-            <button mat-button color="primary" class="add-button"><mat-icon id="create">add</mat-icon>
-            Add New Customer
-            </button>
-          <mat-option *ngFor="let fruit of filteredFruits | async" [value]="fruit">
-            {{fruit}}
-          </mat-option>
-        </mat-autocomplete>
-    </mat-form-field><div class="text-inside">
-      <mat-chip class="outside"
-      *ngFor="let fruit of fruits"
-      [selectable]="selectable"
-      [removable]="removable"
-      (removed)="remove(fruit)">
-      {{fruit}}
-      <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
-    </mat-chip>
-  </div>
 
-    </mat-card>
-  </mat-card-content>
-</mat-card-content>
+    <mat-accordion>
+      <mat-expansion-panel>
 
-<mat-card>
-  <mat-card-content>
-    <mat-card>
-      <mat-card-content>
-      <mat-card-title>Cobertura</mat-card-title>
-      <mat-card-subtitle>¿En que zona quieres trabajar? </mat-card-subtitle>
+        <mat-expansion-panel-header>
+          <mat-panel-title><b> Cobertura </b></mat-panel-title>
+          <mat-panel-description> Verifique en que zona desea trabajar</mat-panel-description>
+        </mat-expansion-panel-header>
 
-        <mat-form-field class="demo-chip-list">
-            <mat-chip-list #chipList>
-              <mat-chip *ngFor="let fruit of fruits" [selectable]="selectable"
-                       [removable]="removable" (removed)="remove(fruit)">
-                {{fruit.name}}
-                <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
-              </mat-chip>
-              <input placeholder="Zonas:"
-                     [matChipInputFor]="chipList"
-                     [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
-                     [matChipInputAddOnBlur]="addOnBlur"
-                     (matChipInputTokenEnd)="add($event)" />
-            </mat-chip-list>
-          </mat-form-field>
-      </mat-card-content>
-    </mat-card>
+        <mat-card-content>
+          <mat-card-content>
+            <mat-card>
+              <mat-form-field class="example-chip-list">
+                <mat-chip-list #chipList required>
+                  <input placeholder="Cutomer name" #fruitInput [matAutocomplete]="auto" [matChipInputFor]="chipList"
+                    [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="addOnBlur"
+                    (matChipInputTokenEnd)="add($event)">
+                </mat-chip-list>
+                <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
+                  <button mat-button color="primary" class="add-button">
+                    <mat-icon id="create">add</mat-icon>
+                    Add New Customer
+                  </button>
+                  <mat-option *ngFor="let fruit of filteredFruits | async" [value]="fruit">
+                    {{fruit}}
+                  </mat-option>
+                </mat-autocomplete>
+              </mat-form-field>
+              <div class="text-inside">
+                <mat-chip class="outside" *ngFor="let fruit of fruits" [selectable]="selectable" [removable]="removable"
+                  (removed)="remove(fruit)">
+                  {{fruit}}
+                  <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+                </mat-chip>
+              </div>
+
+            </mat-card>
+          </mat-card-content>
+        </mat-card-content>
+
+        <!-- <mat-card>
+          <mat-card-content>
+            <mat-card>
+              <mat-card-content>
+                <mat-card-title>Cobertura</mat-card-title>
+                <p></p>
+                <mat-card-subtitle>¿En que zona quieres trabajar? </mat-card-subtitle>
+
+                <mat-form-field class="demo-chip-list">
+                  <mat-chip-list #chipList>
+                    <mat-chip *ngFor="let fruit of fruits" [selectable]="selectable" [removable]="removable"
+                      (removed)="remove(fruit)">
+                      {{fruit.name}}
+                      <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+                    </mat-chip>
+                    <input placeholder="Zonas:" [matChipInputFor]="chipList"
+                      [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="addOnBlur"
+                      (matChipInputTokenEnd)="add($event)" />
+                  </mat-chip-list>
+                </mat-form-field>
+              </mat-card-content>
+            </mat-card>
+
+          </mat-card-content>
+        </mat-card> -->
+      </mat-expansion-panel>
+    </mat-accordion>
+    <p></p>
+
     <div class="example-button-row">
       <button mat-raised-button color="primary" style="margin-right: 20px;">Guardar</button>
       <button mat-raised-button color="warn">Cancelar</button>
     </div>
+
   </mat-card-content>
 </mat-card>
-
