@@ -11,7 +11,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { MaterialRoutes } from './material.routing';
-import { AcademictsComponent } from './buttons/academics.component';
+import { AcademictsComponent } from './academics/academics.component';
 
 import { GridComponent } from './grid/grid.component';
 import { ListsComponent } from './lists/lists.component';

@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 
-import { AcademictsComponent} from './buttons/academics.component'
+import { AcademictsComponent} from './academics/academics.component'
 import { GridComponent } from './grid/grid.component';
 import { ListsComponent } from './lists/lists.component';
 import { MenuComponent } from './menu/menu.component';
@@ -19,7 +19,7 @@ import { SlideToggleComponent } from './slide-toggle/slide-toggle.component';
 
 export const MaterialRoutes: Routes = [
   {
-    path: 'button',
+    path: 'academics',
     component: AcademictsComponent
   },
   {

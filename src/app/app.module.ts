@@ -17,6 +17,7 @@ import { DemoMaterialModule } from './demo-material-module';
 
 import { SharedModule } from './shared/shared.module';
 import { SpinnerComponent } from './shared/spinner.component';
+import { ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { SpinnerComponent } from './shared/spinner.component';
     BrowserModule,
     BrowserAnimationsModule,
     DemoMaterialModule,
+    ReactiveFormsModule,
     FormsModule,
     FlexLayoutModule,
     HttpClientModule,
