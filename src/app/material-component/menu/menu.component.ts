@@ -5,4 +5,8 @@ import { MatMenuModule } from '@angular/material/menu';
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.scss']
 })
-export class MenuComponent {}
+export class MenuComponent {
+  color = 'accent';
+  checked = true;
+  disabled = false;
+}

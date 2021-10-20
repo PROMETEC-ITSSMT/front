@@ -1,47 +1,50 @@
 <mat-card>
   <mat-card-content>
     <mat-card-title>Datos Fiscales</mat-card-title>
-    <mat-slide-toggle>¿Cuentas con datos fiscales?</mat-slide-toggle>
-    <mat-form-field class="example-full-width" >
+    <mat-slide-toggle class="example-margin" [color]="color" [checked]="checked"
+      (change)="checked = !checked" color="primary">
+      ¿Cuentas con datos fiscales?
+			</mat-slide-toggle>
+    <mat-form-field class="example-full-width">
       <mat-label>RFC</mat-label>
-      <input matInput placeholder="Ex. algo@algo.com" value="">
+      <input matInput placeholder="Ex. algo@algo.com" value="" [disabled]="!checked">
     </mat-form-field>
-    <mat-form-field class="example-full-width" >
+    <mat-form-field class="example-full-width">
       <mat-label>Nombre o razón social</mat-label>
-      <input matInput placeholder="Ex. algo@algo.com" value="">
+      <input matInput placeholder="Ex. algo@algo.com" value="" [disabled]="!checked">
     </mat-form-field>
-    <mat-form-field class="example-full-width" >
+    <mat-form-field class="example-full-width">
       <mat-label>Calle</mat-label>
-      <input matInput placeholder="Ex. algo@algo.com" value="">
+      <input matInput placeholder="Ex. algo@algo.com" value="" [disabled]="!checked">
     </mat-form-field>
-    <mat-form-field class="example-full-width" >
+    <mat-form-field class="example-full-width">
       <mat-label>Número exterior</mat-label>
-      <input matInput placeholder="Ex. algo@algo.com" value="">
+      <input matInput placeholder="Ex. algo@algo.com" value="" [disabled]="!checked">
     </mat-form-field>
-    <mat-form-field class="example-full-width" >
+    <mat-form-field class="example-full-width">
       <mat-label>Número interior</mat-label>
-      <input matInput placeholder="Ex. algo@algo.com" value="">
+      <input matInput placeholder="Ex. algo@algo.com" value="" [disabled]="!checked">
     </mat-form-field>
-    <mat-form-field class="example-full-width" >
+    <mat-form-field class="example-full-width">
       <mat-label>Colonia</mat-label>
-      <input matInput placeholder="Ex. algo@algo.com" value="">
+      <input matInput placeholder="Ex. algo@algo.com" value="" [disabled]="!checked">
     </mat-form-field>
-    <mat-form-field class="example-full-width" >
+    <mat-form-field class="example-full-width">
       <mat-label>Código postal</mat-label>
-      <input matInput placeholder="Ex. algo@algo.com" value="">
+      <input matInput placeholder="Ex. algo@algo.com" value="" [disabled]="!checked">
     </mat-form-field>
-    <mat-form-field class="example-full-width" >
+    <mat-form-field class="example-full-width">
       <mat-label>Delegación o municipio</mat-label>
-      <input matInput placeholder="Ex. algo@algo.com" value="">
+      <input matInput placeholder="Ex. algo@algo.com" value="" [disabled]="!checked">
     </mat-form-field>
-    <mat-form-field class="example-full-width" >
+    <mat-form-field class="example-full-width">
       <mat-label>Estado</mat-label>
-      <input matInput placeholder="Ex. algo@algo.com" value="">
+      <input matInput placeholder="Ex. algo@algo.com" value="" [disabled]="!checked">
     </mat-form-field>
 
     <div class="example-button-row">
-      <button mat-raised-button color="primary">Guardar</button>
-      <button mat-raised-button color="warn">Cancelar</button>
+      <button mat-raised-button color="primary" [disabled]="!checked">Guardar</button>
+      <button mat-raised-button color="warn" [disabled]="!checked">Cancelar</button>
     </div>
   </mat-card-content>
 </mat-card>
